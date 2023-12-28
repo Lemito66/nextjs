@@ -1,4 +1,11 @@
 import Link from "next/link";
+
+export const metadata = {
+  title: "Tienda Oficial",
+  description: "Primera aplicación con Next.js",
+  keywords: "nextjs, react, javascript, ecommerce, tienda",
+  
+};
 export default function StoreLayout({ children }) {
   return (
     <>
