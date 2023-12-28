@@ -9,7 +9,7 @@ export default function StoreLayout({ children }) {
             <Link href="/tienda/categorias">Categorías</Link>
           </li>
           <li>
-            <Link href="/tienda/productos">Productos</Link>
+            <Link href="/tienda/categorias/computadoras">Computadoras</Link>
           </li>
         </ul>
       </nav>
