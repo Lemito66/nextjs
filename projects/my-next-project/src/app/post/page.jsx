@@ -3,19 +3,35 @@
 // render
 // esto se hacia antes
 
-async function loadPost () {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-  const data = await res.json()
-  console.log(data);
-  return data
+import { PostCard } from "@/components/PostCard";
 
+
+// carga los datos
+async function loadPost() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
+  //console.log(data);
+  return data;
 }
 
-function PostPages() {
-  loadPost();
+// Renderiza
+async function PostPages() {
+  const posts = await loadPost();
+  console.log(posts);
   return (
-    <div>page</div>
-  )
+    <div>
+      {posts.map(({ id, title, body }) => {
+        return (
+          <PostCard
+            key={id}
+            id={id}
+            title={title}
+            body={body}
+          />
+        );
+      })}
+    </div>
+  );
 }
 
-export default PostPages
+export default PostPages;
