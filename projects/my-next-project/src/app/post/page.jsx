@@ -19,10 +19,10 @@ async function PostPages() {
   const posts = await loadPost();
   console.log(posts);
 
-  await new Promise((resolve) => {
+  /* await new Promise((resolve) => {
     setTimeout(resolve, 3000);
   }
-  );
+  ); */
   return (
     <div>
       {posts.map(({ id, title, body }) => {
