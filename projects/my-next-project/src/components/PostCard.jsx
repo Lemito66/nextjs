@@ -1,13 +1,17 @@
-"use client";   
-// Este es un componente de lado del cliente 
+"use client";
+// Este es un componente de lado del cliente
 // que luego lo vamos a importar a un componente de lado del servidor
+
+import Link from "next/link";
 export function PostCard({ id, title, body }) {
   return (
     <div key={id}>
-      <h2>Post {id}</h2>
-      <h3>{title}</h3>
+      <Link href={`/post/${id}`}>
+        <h2>
+          Post {id} {title}
+        </h2>
+      </Link>
       <p>{body}</p>
-      <button onClick={() => {alert("Funcionando")}}>Click</button>
     </div>
   );
 }
