@@ -13,7 +13,10 @@ export async function GET() {
   return NextResponse.json({data: data, status: "ok" });
 }
 
-export function POST() {
+export async function POST(request) {
+  // El request en este caso es el body de la petición. 
+  const {nombre, apellido} = await request.json();
+  console.log(nombre, apellido);
   return NextResponse.json({ message: "Creando datos", status: "ok" });
 }
 
