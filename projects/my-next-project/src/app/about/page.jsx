@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 
 /* export const metadata = {
   title: "About Page",
@@ -11,11 +11,12 @@ export default function AboutPage() {
   return (
     <section>
       <h1>About Page</h1>
-      <p>fdgffdgdfgdfgsf</p>
+      <p>La siguiente página es acerca de nosotros</p>
 
       <button
         className="bg-sky-500 rounded-md"
         onClick={() => {
+          alert("Executing Code!!!")
           router.push("/"); // Navegar a la página de inicio
         }}
       >

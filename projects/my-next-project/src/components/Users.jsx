@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export function Users() {
   useEffect(() => {
-    alert("Users");
+    //alert("Users");
   }, []);
   return (
     <div>
