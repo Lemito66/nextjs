@@ -17,6 +17,9 @@ export function NavBar() {
         <li>
           <Link href="/post">Post</Link>
         </li>
+        <li>
+          <Link href="/users">Users</Link>
+        </li>
       </ul>
     </nav>
   );
