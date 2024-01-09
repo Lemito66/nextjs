@@ -1,7 +1,21 @@
 "use client";
 import { useRouter } from "next/navigation";
-function NewPage() {
+import { useEffect } from "react";
+function NewPage({ params }) {
+  //console.log(params);
   const router = useRouter();
+
+  useEffect(() => {
+    /* if (!params) {
+      router.push("/");
+    } */
+    /* fetch(`http://localhost:3000/api/tasks/${params.id}`)
+      .then((res) => res.json())
+      .then((data) => console.log(data)); */
+
+    console.log(params.id);
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = e.target.title.value;

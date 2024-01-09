@@ -1,15 +1,16 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/libs/prisma";
 export async function GET({ params }) {
-  const task = await prisma.task.findUnique({
+  /* const tasks = await prisma.task.findUnique({
     where: {
       id: Number(params.id),
     },
   });
   return NextResponse.json({
     message: "obteniendo tarea por id: " + params.id,
-    data: task,
-  });
+    data: tasks,
+  }); */
+  return NextResponse.json("obteniendo tarea por id: " + params.id);
 }
 
 export async function PUT(request, { params }) {
