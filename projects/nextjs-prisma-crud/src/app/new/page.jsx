@@ -1,7 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 function NewPage() {
-
   const router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +23,10 @@ function NewPage() {
   };
   return (
     <div className="h-screen flex justify-center items-center">
-      <form className="bg-slate-800 p-10 lg:w-1/4 md:w-full" onSubmit={handleSubmit}>
+      <form
+        className="bg-slate-800 p-10 lg:w-1/4 md:w-full"
+        onSubmit={handleSubmit}
+      >
         <label htmlFor="title" className="font-bold text-sm">
           Título de la tarea
         </label>
