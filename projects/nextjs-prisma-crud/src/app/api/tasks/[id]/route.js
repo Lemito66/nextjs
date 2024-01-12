@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/libs/prisma";
-export async function GET({ params }) {
-  /* const tasks = await prisma.task.findUnique({
+export async function GET(request, { params }) {
+  const tasks = await prisma.task.findUnique({
     where: {
       id: Number(params.id),
     },
@@ -9,8 +9,7 @@ export async function GET({ params }) {
   return NextResponse.json({
     message: "obteniendo tarea por id: " + params.id,
     data: tasks,
-  }); */
-  return NextResponse.json("obteniendo tarea por id: " + params.id);
+  });
 }
 
 export async function PUT(request, { params }) {
@@ -27,7 +26,7 @@ export async function PUT(request, { params }) {
   });
 }
 
-export async function DELETE({ params }) {
+export async function DELETE(request, { params }) {
   try {
     const taskRemoved = await prisma.task.delete({
       where: {
