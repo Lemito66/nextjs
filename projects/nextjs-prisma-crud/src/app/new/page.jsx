@@ -82,7 +82,7 @@ function NewPage({ params }) {
             type="submit"
             className="bg-green-500 hover:bg-green-700 text-white p-2 font-bold py-2 px-4 rounded"
           >
-            Crear
+            {params.id ? "Actualizar" : "Crear"}
           </button>
 
           {params.id && (
